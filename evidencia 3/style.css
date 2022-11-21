@@ -1,6 +1,14 @@
 *{
     background: gray;
 }
-input{
-    color: black;
+h3{
+    color: red;
+}
+label {
+    background: darkgray;
+    border:1px solid blueviolet ;
+}
+p{
+    color: darkmagenta;
+
 }
