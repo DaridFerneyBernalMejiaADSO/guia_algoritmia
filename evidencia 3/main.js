@@ -1,19 +1,19 @@
 addEventListener("DOMContentLoaded", (e)=>{
     let formulario=document.querySelector("#formulario")
-     cont=1;
-    
     formulario.addEventListener(`submit`,(e)=>{
         e.preventDefault();
         let dato=Object.fromEntries(new FormData(e.target));
-        let imple=dato.imple
-        let tabla =document.querySelector("tbody");
+        nacimiento=Number(dato.nacimiento)
+        actual=Number(dato.actual)
+        edad=(actual-nacimiento)
+         console.log(`${edad}`)
+        tabla =document.querySelector("tbody");
         tabla.insertAdjacentHTML("beforeend",`
              <tr>
-                 <td>${cont}</td>
-                 <td>${imple}</td>
+                 <td>${edad}</td>
+                 
               </tr>
         `)
-        cont++
         
         
         
