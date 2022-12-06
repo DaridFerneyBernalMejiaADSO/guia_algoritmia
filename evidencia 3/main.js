@@ -3,18 +3,15 @@ addEventListener("DOMContentLoaded", (e)=>{
     formulario.addEventListener(`submit`,(e)=>{
         e.preventDefault();
         let dato=Object.fromEntries(new FormData(e.target));
-        nacimiento=Number(dato.nacimiento)
-        actual=Number(dato.actual)
-        edad=(actual-nacimiento)
-         console.log(`${edad}`)
-        tabla =document.querySelector("tbody");
-        tabla.insertAdjacentHTML("beforeend",`
-             <tr>
-                 <td>${edad}</td>
-                 
-              </tr>
-        `)
-        
+        año=Number(dato.año)
+        if(año%4==0 && año%100 !=0 || año % 400 ==0){
+            rta.innerHTML=`es bisisento ${año}`
+
+        }
+        else{
+            rta.innerHTML=`no es bisisento ${año}`
+        }
+  
         
         
         
